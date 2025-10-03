@@ -1,437 +1,559 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      📸 Timeline Studios – Professional Video & Photography in India
+    </title>
+    <meta
+      name="description"
+      content="Capture moments, craft campaigns, and create visual impact. Timeline Studios offers corporate films, wedding shoots, brand ads, and creative edits with excellence."
+    />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timeline Studio</title>
-  <meta name="description"
-    content="At Timeline Studio, we bring your moments to life with creativity, precision, and a touch of magic. From weddings to corporate events, candid shots to cinematic videography, we craft memories you'll cherish forever.">
-  <link rel="shortcut icon" href="assests/images/Time Line Logo.png" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="assests/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assests/images/Time Line Logo.png"
+      type="image/x-icon"
+    />
 
-  <style>
-    .carousel-container {
-      border-radius: 10px;
-      background: linear-gradient(135deg, #ffffff, #fefefed3);
-      /* background-color: red; */
-      overflow: hidden;
-    }
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
 
-    .carousel-inner img {
-      height: 280px;
-      object-fit: cover;
-      border-radius: 15px;
-      transition: transform 0.4s ease-in-out;
-    }
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-    .img-wrapper:hover img {
-      transform: scale(1.05);
-    }
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    .carousel-indicators [data-bs-target] {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: #6c757d;
-    }
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assests/css/style.css" />
 
+    <!-- Open Graph / Facebook -->
+    <meta
+      property="og:title"
+      content="📸 Timeline Studios – Professional Video & Photography in India"
+    />
+    <meta
+      property="og:description"
+      content="Capture moments, craft campaigns, and create visual impact. Timeline Studios offers corporate films, wedding shoots, brand ads, and creative edits with excellence."
+    />
+    <meta
+      property="og:image"
+      content="https://ik.imagekit.io/7lstlpwp3/timeline.jpg?updatedAt=1759476581637"
+    />
+    <meta property="og:url" content="https://yourwebsite.com/" />
+    <meta property="og:type" content="website" />
 
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="📸 Timeline Studios – Professional Video & Photography in India"
+    />
+    <meta
+      name="twitter:description"
+      content="Capture moments, craft campaigns, and create visual impact. Timeline Studios offers corporate films, wedding shoots, brand ads, and creative edits with excellence."
+    />
+    <meta
+      name="twitter:image"
+      content="https://ik.imagekit.io/7lstlpwp3/timeline.jpg?updatedAt=1759476581637"
+    />
 
-    .carousel-indicators .active {
-      background-color: #fabc37;
-      /* elegant pink highlight */
-    }
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
 
+    <style>
+      .carousel-container {
+        border-radius: 10px;
+        background: linear-gradient(135deg, #ffffff, #fefefed3);
+        /* background-color: red; */
+        overflow: hidden;
+      }
 
-    h1 {
-      color: #fabc37;
-    }
-
-    h5 {
-      max-width: 1000px;
-    }
-
-    h1,
-    h5 {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    @media (max-width: 576px) {
       .carousel-inner img {
-        height: 220px;
-      }
-    }
-
-    /* Section background */
-    .section-container {
-      background: linear-gradient(135deg, #ffffff, #fafafa);
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    /* Headings */
-    .section-container h2 {
-      font-size: 2.5rem;
-      font-weight: bold;
-      color: #000000;
-      /* Black */
-      margin-bottom: 10px;
-    }
-
-    .section-container p {
-      font-size: 1.2rem;
-      color: #333333;
-      /* Slightly softer black */
-      margin-bottom: 30px;
-    }
-
-    /* Curved carousel container */
-    .carousel-container {
-      position: relative;
-      border-radius: 40px;
-      padding: 20px 0;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-    }
-
-    /* Thumbnails */
-    .carousel-slide img {
-      border-radius: 15px;
-      border: 3px solid #fabc37;
-      /* Yellow border */
-      max-height: 200px;
-      object-fit: cover;
-    }
-
-    /* Navigation arrows */
-    .carousel-container .prev,
-    .carousel-container .next {
-      background-color: #fabc37;
-      color: #000;
-      border-radius: 50%;
-      padding: 10px;
-      font-size: 18px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .carousel-container .prev:hover,
-    .carousel-container .next:hover {
-      background-color: #000;
-      color: #fabc37;
-    }
-
-    /* Dots */
-    .carousel-dots .dot {
-      height: 12px;
-      width: 12px;
-      margin: 0 5px;
-      background-color: #000000;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .carousel-dots .dot.active {
-      background-color: #fabc37;
-      /* Yellow for active dot */
-    }
-
-    /* Tabs Styling */
-    .nav-pills .nav-link {
-      border-radius: 30px;
-      color: #fff;
-      /* Black text */
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-
-    .nav-pills .nav-link.active {
-      background-color: #fabc37 !important;
-      /* Yellow background */
-      color: #000 !important;
-      /* Black text */
-      font-weight: 600;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    .nav-pills .nav-link:hover {
-      background-color: #fff;
-      color: #000;
-    }
-
-
-    .accordion-button {
-      background-color: transparent;
-      border: none;
-      color: white;
-      font-weight: 700;
-    }
-
-    .accordion-button:not(.collapsed) {
-      background-color: white;
-      color: black;
-    }
-
-    .accordion-button::after {
-      content: "";
-      background-image: url(assests/images/down-arrow.png);
-      transform: scale(1.5);
-    }
-
-    .accordion-item {
-      background-color: transparent;
-      border: none;
-      color: white;
-    }
-
-    .accordion-body {
-      background-color: transparent;
-      text-align: justify;
-    }
-
-    .testimonial-section {
-      position: relative;
-    }
-
-    .testimonial-card {
-      background: linear-gradient(135deg, #ffffff, #f8f9fa);
-      padding: 2rem 1.5rem;
-      border-radius: 20px;
-      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      position: relative;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      height: 100%;
-    }
-
-    .testimonial-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .testimonial-card .circle {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      overflow: hidden;
-      margin: -50px auto 15px;
-      border: 4px solid #fff;
-      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .testimonial-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .testimonial-card p {
-      font-size: 1.05rem;
-      color: #555;
-      margin-bottom: 1rem;
-    }
-
-    .testimonial-card h6 {
-      font-weight: 600;
-      color: #222;
-      margin-bottom: 0.5rem;
-    }
-
-    .testimonial-card span {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #c59d5f;
-      /* accent color */
-    }
-
-    .custom-arrow {
-      font-size: 2rem;
-      color: #fff;
-      /* background: #c59d5f; */
-      border-radius: 50%;
-      padding: 8px 14px;
-      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-
-    footer {
-      background: #fabc37;
-      background-size: 200% 200%;
-      animation: metallic-shine 6s linear infinite;
-      color: #000;
-      text-align: center;
-      padding: 0px 0px;
-      font-family: "Poppins", sans-serif;
-      position: relative;
-      overflow: hidden;
-    }
-
-    footer a {
-      color: #000;
-    }
-
-    .footer-link a {
-      position: relative;
-      text-decoration: none;
-      /* remove default underline */
-      color: inherit;
-      /* keep text color */
-      transition: color 0.3s ease;
-    }
-
-    /* underline effect */
-    .footer-link a::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      /* thickness of underline */
-      background-color: #000;
-      /* change to your footer link color */
-      transition: width 0.4s ease;
-    }
-
-    .footer-link a:hover::after {
-      width: 100%;
-    }
-
-
-    @keyframes metallic-shine {
-      0% {
-        background-position: 0% 50%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 15px;
+        transition: transform 0.4s ease-in-out;
       }
 
-      50% {
-        background-position: 100% 50%;
+      .img-wrapper:hover img {
+        transform: scale(1.05);
       }
 
-      100% {
-        background-position: 0% 50%;
+      .carousel-indicators [data-bs-target] {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #6c757d;
       }
-    }
-  </style>
-</head>
 
-<body>
+      .carousel-indicators .active {
+        background-color: #fabc37;
+        /* elegant pink highlight */
+      }
 
-  <nav class="navbar navbar-expand-lg custom-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="index.html">
-      <!-- Desktop logo (≥768px) -->
-      <img src="assests/images/Timeline Studio_White.png" 
-           class="img-fluid logo-desktop" 
-           width="100px" 
-           alt="Logo Desktop">
+      h1 {
+        color: #fabc37;
+      }
 
-      <!-- Mobile logo (<768px) -->
-      <img src="assests/images/Timeline Studio Logo 02.png" 
-           class="img-fluid logo-mobile" 
-           width="70" 
-           alt="Logo Mobile">
-    </a>
+      h5 {
+        max-width: 1000px;
+      }
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon my-toggler-icon"></span>
-    </button>
+      h1,
+      h5 {
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto text-uppercase">
-        <li class="nav-item">
-          <a class="nav-link active-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="service.html">Our Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="works.html">Our Works</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact Us</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+      @media (max-width: 576px) {
+        .carousel-inner img {
+          height: 220px;
+        }
+      }
 
+      /* Section background */
+      .section-container {
+        background: linear-gradient(135deg, #ffffff, #fafafa);
+        padding: 50px 20px;
+        text-align: center;
+      }
 
-  <div class="container py-5 text-center" data-aos="fade-up">
-    <!-- Heading & Subheading -->
-    <h1 class="fw-bold display-5 mb-4">Capturing your wedding's magic,<br>one moment at a time</h1>
-    <h5 class="mb-4">Capturing the love,joy and magic of your wedding day, <br>preserving timeless memories to cherish
-      forever</h5>
+      /* Headings */
+      .section-container h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #000000;
+        /* Black */
+        margin-bottom: 10px;
+      }
 
-    <!-- Curved Carousel Container -->
-    <div class="carousel-container p-3 shadow" style="margin-top: 80px;">
-      <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
-        <!-- Indicators -->
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"
-            aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      .section-container p {
+        font-size: 1.2rem;
+        color: #333333;
+        /* Slightly softer black */
+        margin-bottom: 30px;
+      }
+
+      /* Curved carousel container */
+      .carousel-container {
+        position: relative;
+        border-radius: 40px;
+        padding: 20px 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      /* Thumbnails */
+      .carousel-slide img {
+        border-radius: 15px;
+        border: 3px solid #fabc37;
+        /* Yellow border */
+        max-height: 200px;
+        object-fit: cover;
+      }
+
+      /* Navigation arrows */
+      .carousel-container .prev,
+      .carousel-container .next {
+        background-color: #fabc37;
+        color: #000;
+        border-radius: 50%;
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .carousel-container .prev:hover,
+      .carousel-container .next:hover {
+        background-color: #000;
+        color: #fabc37;
+      }
+
+      /* Dots */
+      .carousel-dots .dot {
+        height: 12px;
+        width: 12px;
+        margin: 0 5px;
+        background-color: #000000;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .carousel-dots .dot.active {
+        background-color: #fabc37;
+        /* Yellow for active dot */
+      }
+
+      /* Tabs Styling */
+      .nav-pills .nav-link {
+        border-radius: 30px;
+        color: #fff;
+        /* Black text */
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .nav-pills .nav-link.active {
+        background-color: #fabc37 !important;
+        /* Yellow background */
+        color: #000 !important;
+        /* Black text */
+        font-weight: 600;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      .nav-pills .nav-link:hover {
+        background-color: #fff;
+        color: #000;
+      }
+
+      .accordion-button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-weight: 700;
+      }
+
+      .accordion-button:not(.collapsed) {
+        background-color: white;
+        color: black;
+      }
+
+      .accordion-button::after {
+        content: "";
+        background-image: url(assests/images/down-arrow.png);
+        transform: scale(1.5);
+      }
+
+      .accordion-item {
+        background-color: transparent;
+        border: none;
+        color: white;
+      }
+
+      .accordion-body {
+        background-color: transparent;
+        text-align: justify;
+      }
+
+      .testimonial-section {
+        position: relative;
+      }
+
+      .testimonial-card {
+        background: linear-gradient(135deg, #ffffff, #f8f9fa);
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0px 12px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .testimonial-card .circle {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: -50px auto 15px;
+        border: 4px solid #fff;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonial-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .testimonial-card p {
+        font-size: 1.05rem;
+        color: #555;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial-card h6 {
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 0.5rem;
+      }
+
+      .testimonial-card span {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #c59d5f;
+        /* accent color */
+      }
+
+      .custom-arrow {
+        font-size: 2rem;
+        color: #fff;
+        /* background: #c59d5f; */
+        border-radius: 50%;
+        padding: 8px 14px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      footer {
+        background: #fabc37;
+        background-size: 200% 200%;
+        animation: metallic-shine 6s linear infinite;
+        color: #000;
+        text-align: center;
+        padding: 0px 0px;
+        font-family: "Poppins", sans-serif;
+        position: relative;
+        overflow: hidden;
+      }
+
+      footer a {
+        color: #000;
+      }
+
+      .footer-link a {
+        position: relative;
+        text-decoration: none;
+        /* remove default underline */
+        color: inherit;
+        /* keep text color */
+        transition: color 0.3s ease;
+      }
+
+      /* underline effect */
+      .footer-link a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        /* thickness of underline */
+        background-color: #000;
+        /* change to your footer link color */
+        transition: width 0.4s ease;
+      }
+
+      .footer-link a:hover::after {
+        width: 100%;
+      }
+
+      @keyframes metallic-shine {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <!-- Desktop logo (≥768px) -->
+          <img
+            src="assests/images/Timeline Studio_White.png"
+            class="img-fluid logo-desktop"
+            width="100px"
+            alt="Logo Desktop"
+          />
+
+          <!-- Mobile logo (<768px) -->
+          <img
+            src="assests/images/Timeline Studio Logo 02.png"
+            class="img-fluid logo-mobile"
+            width="70"
+            alt="Logo Mobile"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon my-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto text-uppercase">
+            <li class="nav-item">
+              <a class="nav-link active-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="service.html">Our Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="works.html">Our Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact Us</a>
+            </li>
+          </ul>
         </div>
+      </div>
+    </nav>
 
-        <!-- Carousel Items -->
-        <div class="carousel-inner rounded">
-          <!-- Slide 1 -->
-          <div class="carousel-item active">
-            <div class="row g-3">
-              <div class="col-lg-4 col-md-6 col-12">
-                <img src="assests/images/Candid photos/001 (7).webp" class="d-block w-100 img-fluid" alt="...">
+    <div class="container py-5 text-center" data-aos="fade-up">
+      <!-- Heading & Subheading -->
+      <h1 class="fw-bold display-5 mb-4">
+        Capturing your wedding's magic,<br />one moment at a time
+      </h1>
+      <h5 class="mb-4">
+        Capturing the love,joy and magic of your wedding day, <br />preserving
+        timeless memories to cherish forever
+      </h5>
+
+      <!-- Curved Carousel Container -->
+      <div class="carousel-container p-3 shadow" style="margin-top: 80px">
+        <div
+          id="galleryCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+          data-bs-interval="2500"
+        >
+          <!-- Indicators -->
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#galleryCarousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+
+          <!-- Carousel Items -->
+          <div class="carousel-inner rounded">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row g-3">
+                <div class="col-lg-4 col-md-6 col-12">
+                  <img
+                    src="assests/images/Candid photos/001 (7).webp"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                  <img
+                    src="assests/images/Candid photos/02 4.webp"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                  <img
+                    src="assests/images/Candid photos/01 2.webp"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
               </div>
-              <div class="col-lg-4 col-md-6 col-12">
-                <img src="assests/images/Candid photos/02 4.webp" class="d-block w-100 img-fluid" alt="...">
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row g-3">
+                <div class="col-lg-4 col-md-6 col-12">
+                  <img
+                    src="assests/images/Slides/04.webp"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                  <img
+                    src="assests/images/Candid photos/02 13.webp"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                  <img
+                    src="assests/images/Slides/01.webp"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
               </div>
-              <div class="col-lg-4 d-none d-lg-block">
-                <img src="assests/images/Candid photos/01 2.webp" class="d-block w-100 img-fluid" alt="...">
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="row g-3">
+                <div class="col-lg-4 col-md-6 col-12">
+                  <img
+                    src="assests/images/Candid photos/IMG_4666.webp"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-lg-4 col-md-6 col-12">
+                  <img
+                    src="assests/images/Candid photos/IMG_4584.webp"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                  <img
+                    src="assests/images/Candid photos/IMG_4562.webp"
+                    class="d-block w-100 img-fluid"
+                    alt="..."
+                  />
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Slide 2 -->
-          <div class="carousel-item">
-            <div class="row g-3">
-              <div class="col-lg-4 col-md-6 col-12">
-                <img src="assests/images/Slides/04.webp" class="d-block w-100 img-fluid" alt="...">
-              </div>
-              <div class="col-lg-4 col-md-6 col-12">
-                <img src="assests/images/Candid photos/02 13.webp" class="d-block w-100 img-fluid" alt="...">
-              </div>
-              <div class="col-lg-4 d-none d-lg-block">
-                <img src="assests/images/Slides/01.webp" class="d-block w-100 img-fluid" alt="...">
-              </div>
-            </div>
-          </div>
-
-          <!-- Slide 3 -->
-          <div class="carousel-item">
-            <div class="row g-3">
-              <div class="col-lg-4 col-md-6 col-12">
-                <img src="assests/images/Candid photos/IMG_4666.webp" class="d-block w-100 img-fluid" alt="...">
-              </div>
-              <div class="col-lg-4 col-md-6 col-12">
-                <img src="assests/images/Candid photos/IMG_4584.webp" class="d-block w-100 img-fluid" alt="...">
-              </div>
-              <div class="col-lg-4 d-none d-lg-block">
-                <img src="assests/images/Candid photos/IMG_4562.webp" class="d-block w-100 img-fluid" alt="...">
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Controls -->
-        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+          <!-- Controls -->
+          <!-- <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
@@ -439,495 +561,691 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button> -->
-      </div>
-    </div>
-  </div>
-
-
-  <div class="container py-5" data-aos="fade-up" style="margin-top:50px">
-    <!-- Heading Section -->
-    <div class="text-center mb-5">
-      <h2 class="fw-semibold display-5">Welcome to <span class="highlight">Timeline Studio</span></h2>
-      <h2 class="memory fw-bold display-6">Where Every Frame Tells a Story</h2>
-      <p class="fs-6 text-center mt-3">
-        At Timeline Studio, we bring your moments to life with creativity, precision, and a touch of magic.
-        From weddings to corporate events, <br>candid shots to cinematic videography,
-        we craft memories you'll cherish forever.
-      </p>
-    </div>
-
-    <!-- About Section -->
-    <div class="row align-items-center g-5">
-      <!-- Content -->
-      <div class="col-lg-6">
-        <h4 class="display-6 fw-bold mb-3 about">About Us</h4>
-
-        <!-- Stylish Tabs -->
-        <ul class="nav nav-pills gap-3 mb-4" id="aboutTab" role="tablist">
-          <li class="nav-item">
-            <button class="nav-link active" id="style-tab" data-bs-toggle="tab" data-bs-target="#style" type="button"
-              role="tab">My Style</button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link" id="mission-tab" data-bs-toggle="tab" data-bs-target="#mission" type="button"
-              role="tab">Mission</button>
-          </li>
-          <li class="nav-item">
-            <button class="nav-link" id="vision-tab" data-bs-toggle="tab" data-bs-target="#vision" type="button"
-              role="tab">Vision</button>
-          </li>
-        </ul>
-
-        <!-- Tab Content -->
-        <div class="tab-content rounded shadow-sm" id="aboutTabContent">
-          <div class="tab-pane fade show active" id="style" role="tabpanel">
-            <p>
-              Welcome to Timeline Studio, where passion meets creativity. Our team of skilled
-              photographers and cinematographers specializes in capturing weddings through artistic,
-              traditional, and candid photography and videography, ensuring every moment is beautifully preserved.
-              From intimate engagements to grand celebrations, we offer tailored packages to suit your needs and budget.
-            </p>
-          </div>
-          <div class="tab-pane fade" id="mission" role="tabpanel">
-            <p>
-              Our mission is to capture life's most cherished moments with creativity, precision,
-              and artistry. We strive to preserve the emotions and stories of each wedding
-              through exceptional photography and videography, creating timeless memories.
-            </p>
-          </div>
-          <div class="tab-pane fade" id="vision" role="tabpanel">
-            <p>
-              To be a leading name in wedding photography and cinematography, known for blending innovation,
-              tradition, and passion. We envision crafting unique experiences for every couple,
-              turning their special moments into visually stunning and heartfelt stories.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Image Section (linked to tabs) -->
-      <div class="col-lg-6 text-center">
-        <div class="tab-content image-frame mx-auto">
-          <div class="tab-pane fade show active" id="style-img" role="tabpanel">
-            <img src="assests/images/Candid photos/03 11.webp" alt="My Style" class="img-fluid rounded-4 shadow">
-          </div>
-          <div class="tab-pane fade" id="mission-img" role="tabpanel">
-            <img src="assests/images/Candid photos/08 6.webp" alt="Mission" class="img-fluid rounded-4 shadow">
-          </div>
-          <div class="tab-pane fade" id="vision-img" role="tabpanel">
-            <img src="assests/images/Candid photos/IMG_4584.webp" alt="Vision" class="img-fluid rounded-4 shadow">
-          </div>
         </div>
       </div>
     </div>
-  </div>
 
-
-  <div class="container" style="margin-top:100px" data-aos="fade-up">
-    <h1 class="text-center fw-bold display-4">Latest <span style="color: #fabc37"> Works</span> </h1>
-    <div class="row g-5 my-3">
-      <div class="col-md-4">
-        <div class="img-container">
-          <img src="assests/images/Candid photos/001 (8).webp" alt="" class="img-fluid">
-          <!-- <p class="overlay-text">Wedding</p> -->
-        </div>
-
-
-      </div>
-      <div class="col-md-4">
-        <div class="img-container">
-          <img src="assests/images/Candid photos/02 6.webp" alt="" class="img-fluid">
-          <!-- <p class="overlay-text">Reception</p> -->
-        </div>
-
-
-      </div>
-      <div class="col-md-4">
-        <div class="img-container">
-          <img src="assests/images/Candid photos/02 4.webp" alt="" class="Pre-Wed"
-            style="height: 500px;object-fit: cover;">
-          <!-- <p class="overlay-text">Pre Wedding</p> -->
-        </div>
-
-
-      </div>
-
-    </div>
-    <div class="row g-5 my-4">
-      <div class="col-md-4">
-        <div class="img-container">
-          <img src="assests/images/1638x2048.svg" alt="" style="height: 451.7px;" class="img-fluid">
-          <!-- <p class="overlay-text">Maternity</p> -->
-        </div>
-
-
-      </div>
-      <div class="col-md-4">
-        <div class="img-container">
-          <img src="assests/images/1638x2048-1.svg" alt="" style="height: 451.7px;" class="baby-show">
-          <!-- <p class="overlay-text">Baby Shower</p> -->
-        </div>
-
-
-      </div>
-      <div class="col-md-4">
-        <div class="img-container">
-          <img src="assests/images/Candid photos/IMG_4513.webp" alt="" style="height: 451.7px;" class="couple-shoot">
-          <!-- <p class="overlay-text"> Couple Shoot</p> -->
-        </div>
-
-      </div>
-
-    </div>
-    <div class="row g-5 my-4">
-      <div class="col-md-4">
-        <div class="img-container">
-          <img src="assests/images/Latest works/Birthday.webp" alt="">
-          <!-- <p class="overlay-text">Birthday</p> -->
-        </div>
-
-      </div>
-      <div class="col-md-4">
-        <div class="img-container">
-          <img src="assests/images/Latest works/Haldi.webp" alt="">
-          <!-- <p class="overlay-text">Haldi</p> -->
-
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="img-container">
-          <img src="assests/images/Latest works/Baby Shoot.webp" alt="">
-          <!-- <p class="overlay-text">Baby Shoot</p> -->
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="container" style="margin-top: 150px;" data-aos="fade-up">
-    <h2 class="text-center mt-3 fw-bold display-5">
-      Our <span class="memory">Clients</span>
-    </h2>
-    <div class="row justify-content-center align-items-center g-4 mt-4">
-      <div class="col-6 col-md-4 col-lg-2 text-center">
-        <img src="assests/images/Propel Logo.png" alt="Propel" class="img-fluid client-logo">
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 text-center">
-        <img src="assests/images/kobelco-logo-Green.png" alt="Kobelco" class="img-fluid client-logo">
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 text-center">
-        <img src="assests/images/Fit Kannamma logo.png" alt="Fit Kannamma" class="img-fluid client-logo">
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 text-center">
-        <img src="assests/images/Just Salwars logo.avif" alt="Just Salwars" class="img-fluid client-logo">
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 text-center">
-        <img src="assests/images/Mr DJ Logo.jpg" alt="Mr DJ" class="img-fluid client-logo">
-      </div>
-      <div class="col-6 col-md-4 col-lg-2 text-center">
-        <img src="assests/images/manna mess logo (2).jpg" alt="Manna Mess" class="img-fluid client-logo">
-      </div>
-    </div>
-  </div>
-
-
-
-  <div class="container py-5" style="margin-top: 80px;" data-aos="fade-up">
-    <div class="row align-items-start g-5">
-
-      <!-- FAQ Section -->
-      <div class="col-lg-6">
-        <h2 class="display-5 fw-bold mb-4">
-          What You Need to Know <br> <span style="color:#fabc37">About Us</span>
+    <div class="container py-5" data-aos="fade-up" style="margin-top: 50px">
+      <!-- Heading Section -->
+      <div class="text-center mb-5">
+        <h2 class="fw-semibold display-5">
+          Welcome to <span class="highlight">Timeline Studio</span>
         </h2>
+        <h2 class="memory fw-bold display-6">
+          Where Every Frame Tells a Story
+        </h2>
+        <p class="fs-6 text-center mt-3">
+          At Timeline Studio, we bring your moments to life with creativity,
+          precision, and a touch of magic. From weddings to corporate events,
+          <br />candid shots to cinematic videography, we craft memories you'll
+          cherish forever.
+        </p>
+      </div>
 
-        <div class="accordion custom-accordion" id="faqAccordion">
+      <!-- About Section -->
+      <div class="row align-items-center g-5">
+        <!-- Content -->
+        <div class="col-lg-6">
+          <h4 class="display-6 fw-bold mb-3 about">About Us</h4>
 
-          <!-- Item 1 -->
-          <div class="accordion-item shadow-sm mb-3">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne" data-img="assests/images/Candid photos/05 5.webp">
-                <i class="bi bi-camera-reels me-2"></i> What is your photography style?
+          <!-- Stylish Tabs -->
+          <ul class="nav nav-pills gap-3 mb-4" id="aboutTab" role="tablist">
+            <li class="nav-item">
+              <button
+                class="nav-link active"
+                id="style-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#style"
+                type="button"
+                role="tab"
+              >
+                My Style
               </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Our photography style combines artistic, traditional, and candid approaches. We focus on capturing
-                natural emotions and beautiful moments in a timeless and creative way, ensuring every detail is
-                preserved.
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 2 -->
-          <div class="accordion-item shadow-sm mb-3">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
-                data-img="assests/images/Candid photos/IMG_4513.webp">
-                <i class="bi bi-film me-2"></i> Do you offer wedding cinematography?
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                id="mission-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#mission"
+                type="button"
+                role="tab"
+              >
+                Mission
               </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Yes, we specialize in cinematic wedding films. Our team captures the essence of your special day through
-                storytelling, turning your moments into a cinematic experience you'll cherish forever.
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 3 -->
-          <div class="accordion-item shadow-sm mb-3">
-            <h2 class="accordion-header" id="headingThree">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
-                data-img="assests/images/Candid photos/01 8.webp">
-                <i class="bi bi-heart me-2"></i> What moments do you capture during a wedding?
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                id="vision-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#vision"
+                type="button"
+                role="tab"
+              >
+                Vision
               </button>
-            </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                We cover every important moment, from the bridal preparations and ceremony to candid shots, family
-                portraits, and reception. We ensure no special moment is missed, capturing your day in its entirety.
-              </div>
-            </div>
-          </div>
+            </li>
+          </ul>
 
-          <!-- Item 4 -->
-          <div class="accordion-item shadow-sm mb-3">
-            <h2 class="accordion-header" id="headingFour">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
-                data-img="assests/images/Candid photos/DSC01599.webp">
-                <i class="bi bi-calendar-check me-2"></i> How early should we book your services?
-              </button>
-            </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                We recommend booking at least 6 months in advance to ensure availability, particularly during peak
-                wedding seasons. Early booking gives you peace of mind and guarantees your preferred dates.
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 5 -->
-          <div class="accordion-item shadow-sm mb-3">
-            <h2 class="accordion-header" id="headingFive">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
-                data-img="assests/images/Candid photos/001 (8).webp">
-                <i class="bi bi-gift-fill me-2"></i> Do you provide customized packages for different events?
-              </button>
-            </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
-              data-bs-parent="#faqAccordion">
-              <div class="accordion-body">
-                Yes, we offer customized packages tailored to your specific needs and event details. Whether it's a
-                wedding,
-                corporate event, or personal celebration, we work with you to create a package that suits your vision
-                and
+          <!-- Tab Content -->
+          <div class="tab-content rounded shadow-sm" id="aboutTabContent">
+            <div class="tab-pane fade show active" id="style" role="tabpanel">
+              <p>
+                Welcome to Timeline Studio, where passion meets creativity. Our
+                team of skilled photographers and cinematographers specializes
+                in capturing weddings through artistic, traditional, and candid
+                photography and videography, ensuring every moment is
+                beautifully preserved. From intimate engagements to grand
+                celebrations, we offer tailored packages to suit your needs and
                 budget.
+              </p>
+            </div>
+            <div class="tab-pane fade" id="mission" role="tabpanel">
+              <p>
+                Our mission is to capture life's most cherished moments with
+                creativity, precision, and artistry. We strive to preserve the
+                emotions and stories of each wedding through exceptional
+                photography and videography, creating timeless memories.
+              </p>
+            </div>
+            <div class="tab-pane fade" id="vision" role="tabpanel">
+              <p>
+                To be a leading name in wedding photography and cinematography,
+                known for blending innovation, tradition, and passion. We
+                envision crafting unique experiences for every couple, turning
+                their special moments into visually stunning and heartfelt
+                stories.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Section (linked to tabs) -->
+        <div class="col-lg-6 text-center">
+          <div class="tab-content image-frame mx-auto">
+            <div
+              class="tab-pane fade show active"
+              id="style-img"
+              role="tabpanel"
+            >
+              <img
+                src="assests/images/Candid photos/03 11.webp"
+                alt="My Style"
+                class="img-fluid rounded-4 shadow"
+              />
+            </div>
+            <div class="tab-pane fade" id="mission-img" role="tabpanel">
+              <img
+                src="assests/images/Candid photos/08 6.webp"
+                alt="Mission"
+                class="img-fluid rounded-4 shadow"
+              />
+            </div>
+            <div class="tab-pane fade" id="vision-img" role="tabpanel">
+              <img
+                src="assests/images/Candid photos/IMG_4584.webp"
+                alt="Vision"
+                class="img-fluid rounded-4 shadow"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 100px" data-aos="fade-up">
+      <h1 class="text-center fw-bold display-4">
+        Latest <span style="color: #fabc37"> Works</span>
+      </h1>
+      <div class="row g-5 my-3">
+        <div class="col-md-4">
+          <div class="img-container">
+            <img
+              src="assests/images/Candid photos/001 (8).webp"
+              alt=""
+              class="img-fluid"
+            />
+            <!-- <p class="overlay-text">Wedding</p> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="img-container">
+            <img
+              src="assests/images/Candid photos/02 6.webp"
+              alt=""
+              class="img-fluid"
+            />
+            <!-- <p class="overlay-text">Reception</p> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="img-container">
+            <img
+              src="assests/images/Candid photos/02 4.webp"
+              alt=""
+              class="Pre-Wed"
+              style="height: 500px; object-fit: cover"
+            />
+            <!-- <p class="overlay-text">Pre Wedding</p> -->
+          </div>
+        </div>
+      </div>
+      <div class="row g-5 my-4">
+        <div class="col-md-4">
+          <div class="img-container">
+            <img
+              src="assests/images/1638x2048.svg"
+              alt=""
+              style="height: 451.7px"
+              class="img-fluid"
+            />
+            <!-- <p class="overlay-text">Maternity</p> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="img-container">
+            <img
+              src="assests/images/1638x2048-1.svg"
+              alt=""
+              style="height: 451.7px"
+              class="baby-show"
+            />
+            <!-- <p class="overlay-text">Baby Shower</p> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="img-container">
+            <img
+              src="assests/images/Candid photos/IMG_4513.webp"
+              alt=""
+              style="height: 451.7px"
+              class="couple-shoot"
+            />
+            <!-- <p class="overlay-text"> Couple Shoot</p> -->
+          </div>
+        </div>
+      </div>
+      <div class="row g-5 my-4">
+        <div class="col-md-4">
+          <div class="img-container">
+            <img src="assests/images/Latest works/Birthday.webp" alt="" />
+            <!-- <p class="overlay-text">Birthday</p> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="img-container">
+            <img src="assests/images/Latest works/Haldi.webp" alt="" />
+            <!-- <p class="overlay-text">Haldi</p> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="img-container">
+            <img src="assests/images/Latest works/Baby Shoot.webp" alt="" />
+            <!-- <p class="overlay-text">Baby Shoot</p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top: 150px" data-aos="fade-up">
+      <h2 class="text-center mt-3 fw-bold display-5">
+        Our <span class="memory">Clients</span>
+      </h2>
+      <div class="row justify-content-center align-items-center g-4 mt-4">
+        <div class="col-6 col-md-4 col-lg-2 text-center">
+          <img
+            src="assests/images/Propel Logo.png"
+            alt="Propel"
+            class="img-fluid client-logo"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2 text-center">
+          <img
+            src="assests/images/kobelco-logo-Green.png"
+            alt="Kobelco"
+            class="img-fluid client-logo"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2 text-center">
+          <img
+            src="assests/images/Fit Kannamma logo.png"
+            alt="Fit Kannamma"
+            class="img-fluid client-logo"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2 text-center">
+          <img
+            src="assests/images/Just Salwars logo.avif"
+            alt="Just Salwars"
+            class="img-fluid client-logo"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2 text-center">
+          <img
+            src="assests/images/Mr DJ Logo.jpg"
+            alt="Mr DJ"
+            class="img-fluid client-logo"
+          />
+        </div>
+        <div class="col-6 col-md-4 col-lg-2 text-center">
+          <img
+            src="assests/images/manna mess logo (2).jpg"
+            alt="Manna Mess"
+            class="img-fluid client-logo"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5" style="margin-top: 80px" data-aos="fade-up">
+      <div class="row align-items-start g-5">
+        <!-- FAQ Section -->
+        <div class="col-lg-6">
+          <h2 class="display-5 fw-bold mb-4">
+            What You Need to Know <br />
+            <span style="color: #fabc37">About Us</span>
+          </h2>
+
+          <div class="accordion custom-accordion" id="faqAccordion">
+            <!-- Item 1 -->
+            <div class="accordion-item shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="true"
+                  aria-controls="collapseOne"
+                  data-img="assests/images/Candid photos/05 5.webp"
+                >
+                  <i class="bi bi-camera-reels me-2"></i> What is your
+                  photography style?
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="headingOne"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Our photography style combines artistic, traditional, and
+                  candid approaches. We focus on capturing natural emotions and
+                  beautiful moments in a timeless and creative way, ensuring
+                  every detail is preserved.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="collapseTwo"
+                  data-img="assests/images/Candid photos/IMG_4513.webp"
+                >
+                  <i class="bi bi-film me-2"></i> Do you offer wedding
+                  cinematography?
+                </button>
+              </h2>
+              <div
+                id="collapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTwo"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Yes, we specialize in cinematic wedding films. Our team
+                  captures the essence of your special day through storytelling,
+                  turning your moments into a cinematic experience you'll
+                  cherish forever.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                  aria-expanded="false"
+                  aria-controls="collapseThree"
+                  data-img="assests/images/Candid photos/01 8.webp"
+                >
+                  <i class="bi bi-heart me-2"></i> What moments do you capture
+                  during a wedding?
+                </button>
+              </h2>
+              <div
+                id="collapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingThree"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  We cover every important moment, from the bridal preparations
+                  and ceremony to candid shots, family portraits, and reception.
+                  We ensure no special moment is missed, capturing your day in
+                  its entirety.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingFour">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                  aria-expanded="false"
+                  aria-controls="collapseFour"
+                  data-img="assests/images/Candid photos/DSC01599.webp"
+                >
+                  <i class="bi bi-calendar-check me-2"></i> How early should we
+                  book your services?
+                </button>
+              </h2>
+              <div
+                id="collapseFour"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFour"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  We recommend booking at least 6 months in advance to ensure
+                  availability, particularly during peak wedding seasons. Early
+                  booking gives you peace of mind and guarantees your preferred
+                  dates.
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="accordion-item shadow-sm mb-3">
+              <h2 class="accordion-header" id="headingFive">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                  aria-expanded="false"
+                  aria-controls="collapseFive"
+                  data-img="assests/images/Candid photos/001 (8).webp"
+                >
+                  <i class="bi bi-gift-fill me-2"></i> Do you provide customized
+                  packages for different events?
+                </button>
+              </h2>
+              <div
+                id="collapseFive"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingFive"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Yes, we offer customized packages tailored to your specific
+                  needs and event details. Whether it's a wedding, corporate
+                  event, or personal celebration, we work with you to create a
+                  package that suits your vision and budget.
+                </div>
               </div>
             </div>
           </div>
-
         </div>
-      </div>
 
-      <!-- Image Section (Right Side) -->
-      <div class="col-lg-6 text-center position-relative">
-        <div class="faq-image-frame p-4 shadow-lg rounded-4">
-          <img id="faqImage" src="assests/images/Candid photos/DSC01722.webp" class="img-fluid rounded-4">
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-
-  <div class="container testimonial-section" data-aos="fade-up">
-    <div class="text-center" style="margin-top: 60px;">
-      <h5 class="fw-bold display-5">Our <span class="memory">Client Says</span></h5>
-    </div>
-
-    <!-- Desktop Grid -->
-    <div class="row my-5 g-4 testimonial d-none d-lg-flex">
-      <div class="col-lg-4 col-md-6">
-        <div class="testimonial-card">
-          <div class="circle">
-            <img src="assests/images/5907.jpg" class="img-fluid" alt="">
+        <!-- Image Section (Right Side) -->
+        <div class="col-lg-6 text-center position-relative">
+          <div class="faq-image-frame p-4 shadow-lg rounded-4">
+            <img
+              id="faqImage"
+              src="assests/images/Candid photos/DSC01722.webp"
+              class="img-fluid rounded-4"
+            />
           </div>
-          <p>"Timeline Studio captured every moment of our wedding beautifully. The team was
-            professional, attentive, and the photos turned out better than we could have imagined."</p>
-          <h6>"Absolutely amazing experience!"</h6>
-          <span>Priya & Arun</span>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="testimonial-card">
-          <div class="circle">
-            <img src="assests/images/5907.jpg" class="img-fluid" alt="">
-          </div>
-          <p>"The professionalism and attention to detail at Timeline Studio is unmatched.
-            Their photography style is elegant and timeless."</p>
-          <h6>"Highly recommend their services!"</h6>
-          <span>Vijay & Aarti</span>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="testimonial-card">
-          <div class="circle">
-            <img src="assests/images/5907.jpg" class="img-fluid" alt="">
-          </div>
-          <p>"The wedding film Timeline Studio created for us was nothing short magical.
-            They took the time to understand our story and turned it into a cinematic masterpiece."</p>
-          <h6>"A truly cinematic experience!"</h6>
-          <span>Raj & Sneha</span>
         </div>
       </div>
     </div>
 
-    <!-- Mobile Carousel -->
-    <div id="testimonialCarousel" class="carousel slide d-lg-none" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="testimonial-card text-center">
+    <div class="container testimonial-section" data-aos="fade-up">
+      <div class="text-center" style="margin-top: 60px">
+        <h5 class="fw-bold display-5">
+          Our <span class="memory">Client Says</span>
+        </h5>
+      </div>
+
+      <!-- Desktop Grid -->
+      <div class="row my-5 g-4 testimonial d-none d-lg-flex">
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card">
             <div class="circle">
-              <img src="assests/images/5907.jpg" class="img-fluid" alt="">
+              <img src="assests/images/5907.jpg" class="img-fluid" alt="" />
             </div>
-            <p>"Timeline Studio captured every moment of our wedding beautifully. The team was
-              professional and attentive."</p>
+            <p>
+              "Timeline Studio captured every moment of our wedding beautifully.
+              The team was professional, attentive, and the photos turned out
+              better than we could have imagined."
+            </p>
             <h6>"Absolutely amazing experience!"</h6>
             <span>Priya & Arun</span>
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="testimonial-card text-center">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card">
             <div class="circle">
-              <img src="assests/images/5907.jpg" class="img-fluid" alt="">
+              <img src="assests/images/5907.jpg" class="img-fluid" alt="" />
             </div>
-            <p>"The professionalism and attention to detail at Timeline Studio is unmatched."</p>
+            <p>
+              "The professionalism and attention to detail at Timeline Studio is
+              unmatched. Their photography style is elegant and timeless."
+            </p>
             <h6>"Highly recommend their services!"</h6>
             <span>Vijay & Aarti</span>
           </div>
         </div>
-        <div class="carousel-item">
-          <div class="testimonial-card text-center">
+
+        <div class="col-lg-4 col-md-6">
+          <div class="testimonial-card">
             <div class="circle">
-              <img src="assests/images/5907.jpg" class="img-fluid" alt="">
+              <img src="assests/images/5907.jpg" class="img-fluid" alt="" />
             </div>
-            <p>"The wedding film Timeline Studio created for us was nothing short magical."</p>
+            <p>
+              "The wedding film Timeline Studio created for us was nothing short
+              magical. They took the time to understand our story and turned it
+              into a cinematic masterpiece."
+            </p>
             <h6>"A truly cinematic experience!"</h6>
             <span>Raj & Sneha</span>
           </div>
         </div>
       </div>
 
-      <!-- Custom Controls -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-        <span class="custom-arrow">&#10094;</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-        <span class="custom-arrow">&#10095;</span>
-      </button>
+      <!-- Mobile Carousel -->
+      <div
+        id="testimonialCarousel"
+        class="carousel slide d-lg-none"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="testimonial-card text-center">
+              <div class="circle">
+                <img src="assests/images/5907.jpg" class="img-fluid" alt="" />
+              </div>
+              <p>
+                "Timeline Studio captured every moment of our wedding
+                beautifully. The team was professional and attentive."
+              </p>
+              <h6>"Absolutely amazing experience!"</h6>
+              <span>Priya & Arun</span>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-card text-center">
+              <div class="circle">
+                <img src="assests/images/5907.jpg" class="img-fluid" alt="" />
+              </div>
+              <p>
+                "The professionalism and attention to detail at Timeline Studio
+                is unmatched."
+              </p>
+              <h6>"Highly recommend their services!"</h6>
+              <span>Vijay & Aarti</span>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonial-card text-center">
+              <div class="circle">
+                <img src="assests/images/5907.jpg" class="img-fluid" alt="" />
+              </div>
+              <p>
+                "The wedding film Timeline Studio created for us was nothing
+                short magical."
+              </p>
+              <h6>"A truly cinematic experience!"</h6>
+              <span>Raj & Sneha</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="custom-arrow">&#10094;</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span class="custom-arrow">&#10095;</span>
+        </button>
+      </div>
     </div>
-  </div>
 
+    <footer class="footer" style="margin-top: 40px" data-aos="fade-up">
+      <div class="container py-4 px-4">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 text-center text-md-start">
+            <img
+              src="assests/images/Timeline Studio_Black.png"
+              alt=""
+              class="img-fluid"
+              width="250px"
+            />
+            <p class="foot-text">
+              Capturing timeless moments with creativity and precision. Your
+              one-stop destination for stunning visuals and storytelling.
+              Transforming your moments into lasting memories.
+            </p>
 
-
-
-  <footer class="footer" style="margin-top: 40px;" data-aos="fade-up">
-    <div class="container py-4 px-4">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 text-center text-md-start">
-          <img src="assests/images/Timeline Studio_Black.png" alt="" class="img-fluid" width="250px">
-          <p class="foot-text">Capturing timeless moments with creativity and precision. Your one-stop destination for
-            stunning visuals and storytelling.
-            Transforming your moments into lasting memories.</p>
-
-          <p></p>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center text-md-start">
-          <h5>Quick Links</h5>
-          <ul class="list-unstyled">
-            <li class="footer-link active-link"><a href="index.html" class="text-uppercase active-link">Home</a></li>
-            <li class="footer-link active-link"><a href="service.html" class="text-uppercase">Our Services</a></li>
-            <li class="footer-link"><a href="works.html" class="text-uppercase">Our Works</a></li>
-            <!-- <li class="footer-link"><a href="gallery.html" class="text-uppercase">Gallery</a></li> -->
-            <li class="footer-link"><a href="contact.html" class="text-uppercase">Contact Us</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 col-md-6 text-center text-md-start">
-          <h5>Follow Us</h5>
-          <div class="d-flex gap-4 social justify-content-center justify-content-md-start">
-            <a href="#" class="fs-4"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="fs-4"><i class="bi bi-youtube"></i></a>
-            <a href="#" class="fs-4"><i class="bi bi-instagram"></i></a>
+            <p></p>
+          </div>
+          <div class="col-lg-3 col-md-6 text-center text-md-start">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li class="footer-link active-link">
+                <a href="index.html" class="text-uppercase active-link">Home</a>
+              </li>
+              <li class="footer-link active-link">
+                <a href="service.html" class="text-uppercase">Our Services</a>
+              </li>
+              <li class="footer-link">
+                <a href="works.html" class="text-uppercase">Our Works</a>
+              </li>
+              <!-- <li class="footer-link"><a href="gallery.html" class="text-uppercase">Gallery</a></li> -->
+              <li class="footer-link">
+                <a href="contact.html" class="text-uppercase">Contact Us</a>
+              </li>
+            </ul>
           </div>
 
+          <div class="col-lg-3 col-md-6 text-center text-md-start">
+            <h5>Follow Us</h5>
+            <div
+              class="d-flex gap-4 social justify-content-center justify-content-md-start"
+            >
+              <a href="#" class="fs-4"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="fs-4"><i class="bi bi-youtube"></i></a>
+              <a href="#" class="fs-4"><i class="bi bi-instagram"></i></a>
+            </div>
+          </div>
         </div>
       </div>
 
-    </div>
-
-    
       <div class="row bg-black text-white py-3">
-  <div class="col-12 d-flex justify-content-center">
-     <p class="copy mb-0">© 2025 Timeline Studios. All rights reserved. Crafted with ❤️ by <a href="https://discovertechnologies.co/" style="color: #fff; text-decoration: none;">ARA Discover Technologies.</a></p>
-  </div>
-</div>
+        <div class="col-12 d-flex justify-content-center">
+          <p class="copy mb-0">
+            © 2025 Timeline Studios. All rights reserved. Crafted with ❤️ by
+            <a
+              href="https://discovertechnologies.co/"
+              style="color: #fff; text-decoration: none"
+              >ARA Discover Technologies.</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
 
-  </footer>
+    <a href="https://wa.link/6xepqk" target="_blank" class="chat"
+      ><img
+        src="assests/images/Whatsapp Icon.webp"
+        class="img-fluid"
+        alt=""
+        srcset=""
+    /></a>
 
-  <a href="https://wa.link/6xepqk" target="_blank" class="chat"><img src="assests/images/Whatsapp Icon.webp"
-      class="img-fluid" alt="" srcset=""></a>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
-
-
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
-  <script>
-    const aboutTabs = document.querySelectorAll('#aboutTab button');
-    aboutTabs.forEach(tab => {
-      tab.addEventListener('shown.bs.tab', function (event) {
-        const targetId = event.target.getAttribute('data-bs-target');
-        const imageId = targetId + "-img";
-        const imageTabs = document.querySelectorAll('.image-frame .tab-pane');
-        imageTabs.forEach(img => img.classList.remove('show', 'active'));
-        document.querySelector(imageId).classList.add('show', 'active');
+    <script>
+      const aboutTabs = document.querySelectorAll("#aboutTab button");
+      aboutTabs.forEach((tab) => {
+        tab.addEventListener("shown.bs.tab", function (event) {
+          const targetId = event.target.getAttribute("data-bs-target");
+          const imageId = targetId + "-img";
+          const imageTabs = document.querySelectorAll(".image-frame .tab-pane");
+          imageTabs.forEach((img) => img.classList.remove("show", "active"));
+          document.querySelector(imageId).classList.add("show", "active");
+        });
       });
-    });
-  </script>
+    </script>
 
-  <!-- Script for dynamic image change -->
-  <script>
-    document.querySelectorAll('#faqAccordion .accordion-button').forEach(button => {
-      button.addEventListener('click', function () {
-        const imgSrc = this.getAttribute('data-img');
-        document.getElementById('faqImage').setAttribute('src', imgSrc);
-      });
-    });
-  </script>
-
-
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<script src="assests/script/script.js"></script>
-
+    <!-- Script for dynamic image change -->
+    <script>
+      document
+        .querySelectorAll("#faqAccordion .accordion-button")
+        .forEach((button) => {
+          button.addEventListener("click", function () {
+            const imgSrc = this.getAttribute("data-img");
+            document.getElementById("faqImage").setAttribute("src", imgSrc);
+          });
+        });
+    </script>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+  <script src="assests/script/script.js"></script>
 </html>
