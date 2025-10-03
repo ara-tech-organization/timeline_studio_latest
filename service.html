@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services - Timeline Studio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <style>
+    body {
+      background-color: #000;
+      /* black background */
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden !important;
+    }
+
+    /* Default desktop logo size */
+.logo-desktop {
+  width: 160px; /* increase size here */
+  max-width: 100%;
+}
+
+/* Mobile logo (unchanged) */
+.logo-mobile {
+  display: none;
+  width: 90px;
+}
+
+/* Show/hide depending on screen size */
+@media (max-width: 767.98px) {
+  .logo-desktop {
+    display: none;
+  }
+  .logo-mobile {
+    display: inline-block;
+  }
+}
+
+
+    .hero {
+      position: relative;
+      height: 80vh;
+      background: url("./assests/images/img/ser-5.webp") no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      /* black overlay */
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 20px;
+    }
+
+    .badge-custom {
+      background: #facc15;
+      /* golden/yellow badge */
+      color: black;
+      font-size: 1rem;
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 20px 0;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #e5e5e5;
+    }
+
+    .service-section {
+      padding: 80px 0;
+    }
+
+    .service-block {
+      margin-bottom: 80px;
+      /* consistent gap between services */
+    }
+
+    .service-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .service-text {
+      font-size: 1.1rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .service-img {
+      width: 100%;
+      max-width: 750px;
+      /* keeps them consistent */
+      height: 400px;
+      /* fixed height for alignment */
+      object-fit: cover;
+      /* crop to fit nicely */
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .service-title i {
+      color: #fabc37;
+      /* golden accent */
+      font-size: 1.5rem;
+    }
+
+    .why-choose-us {
+      background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95)),
+        url("studio-bg.webp") center/cover no-repeat;
+      color: #fff;
+      padding: 80px 10px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+      font-weight: 700;
+      color: #fabc37;
+      text-shadow: 0 0 10px rgba(247, 197, 49, 0.6);
+    }
+
+    .choose-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .choose-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 15px;
+      padding: 30px 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(6px);
+    }
+
+    .choose-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(247, 197, 49, 0.2);
+      border-color: #fabc37;
+    }
+
+    .choose-card .icon {
+      font-size: 2rem;
+      color: #fabc37;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 575.98px) {
+      .hero {
+        height: 60vh;
+        padding: 80px 20px;
+        margin-top: 50px;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+        /* margin-top: 10px; */
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .service-title {
+        font-size: 1.5rem;
+      }
+
+      .service-text {
+        font-size: 1rem;
+      }
+
+      .service-img {
+        height: 220px;
+        max-width: 100%;
+      }
+
+      .service-block {
+        padding: 20px;
+      }
+    }
+
+    /* 576px - 767px (Small Devices: Large Phones / Small Tablets) */
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      .hero {
+        height: 65vh;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+      }
+
+      .service-title {
+        font-size: 1.6rem;
+      }
+
+      .service-img {
+        height: 280px;
+      }
+    }
+
+    /* 768px - 991px (Medium Devices: Tablets) */
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .hero {
+        height: 70vh;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .service-title {
+        font-size: 1.8rem;
+      }
+
+      .service-img {
+        height: 320px;
+      }
+    }
+
+    /* 992px - 1199px (Large Devices: Laptops) */
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      .hero {
+        height: 75vh;
+      }
+
+      .hero h1 {
+        font-size: 2.6rem;
+      }
+
+      .service-title {
+        font-size: 1.9rem;
+      }
+
+      .service-img {
+        height: 360px;
+      }
+    }
+
+    /* 1200px - 1399px (XL Devices: Desktops) */
+    @media (min-width: 1200px) and (max-width: 1399.98px) {
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .service-title {
+        font-size: 2rem;
+      }
+
+      .service-img {
+        height: 380px;
+      }
+    }
+
+   .cta-section {
+  background: #111;
+  background-size: 400% 400%;
+  animation: metallic-shine 8s ease infinite;
+  color: #fff;
+  min-height: 250px;
+  padding: 60px 40px;
+  text-align: center;
+  max-width: 1500px;
+  margin: 60px auto;
+  border-radius: 20px;
+  border: 1px solid #222;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  /* smoother animation */
+  transition: transform 0.6s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-section:hover {
+  transform: translateY(-25px);
+  border-color: #fabc37;
+  box-shadow: 0 0 20px rgba(255, 193, 7, 0.3);
+}
+
+    .cta-heading {
+      font-size: 2rem;
+      font-weight: 600;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .cta-para{
+      font-size: 1.2rem;
+      font-weight: 400;
+      font-family: "Poppins", sans-serif;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      background: #fabc37;
+      color: #000;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-cta:hover {
+      background: #fabc37;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(247, 197, 49, 0.4);
+    }
+
+    /* Metallic shine effect */
+    @keyframes metallic-shine {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .nav-item .active-link {
+      color: #fabc37 !important;
+    }
+
+    .footer-link .active-link {
+      color: #000 !important;
+    }
+
+    footer .list-unstyled li {
+      padding: 7px 0;
+    }
+
+    .social a {
+      padding: 7px 0;
+    }
+
+
+    .footer-link a {
+      text-decoration: none;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      height: 90px;
+    }
+
+    .custom-navbar {
+      background-color: #121212;
+    }
+
+    .nav-link:hover {
+      color: #fabc37;
+      border-bottom: 2px solid #fabc37;
+      display: inline-block;
+      transition: border-bottom 0.3s ease-out, color 0.3s ease-out;
+    }
+
+    .custom-border {
+      border: 1px solid white;
+    }
+
+    .memory {
+      color: #fabc37;
+    }
+
+    .nav-link {
+      color: white;
+      font-size: 14px;
+      display: inline-block;
+    }
+
+
+
+
+    footer {
+      background: #fabc37;
+      background-size: 200% 200%;
+      animation: metallic-shine 6s linear infinite;
+      color: #000;
+      text-align: center;
+      padding: 0px 0px;
+      font-family: "Poppins", sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    footer a {
+      color: #000;
+    }
+
+    .footer-link a {
+      position: relative;
+      text-decoration: none;
+      /* remove default underline */
+      color: inherit;
+      /* keep text color */
+      transition: color 0.3s ease;
+    }
+
+    /* underline effect */
+    .footer-link a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      /* thickness of underline */
+      background-color: #000;
+      /* change to your footer link color */
+      transition: width 0.4s ease;
+    }
+
+    .footer-link a:hover::after {
+      width: 100%;
+    }
+
+
+    @keyframes metallic-shine {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    @media (max-width: 992px) {
+      .custom-navbar {
+        background-color: #121212;
+      }
+
+      .navbar-collapse.show {
+        background-color: #121212;
+        width: 100%;
+        border-radius: 10px;
+        padding: 6px 8px;
+      }
+
+      .navbar-toggler-icon {
+        background-color: #fabc37;
+        padding: 20px;
+        border-radius: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <!-- Desktop logo (≥768px) -->
+        <img src="assests/images/Timeline Studio_White.png" 
+           class="img-fluid logo-desktop" 
+           width="100px" 
+           alt="Logo Desktop">
+
+        <!-- Mobile logo (<768px) -->
+        <img src="assests/images/Timeline Studio Logo 02.png" class="img-fluid logo-mobile" width="70"
+          alt="Logo Mobile">
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon my-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto text-uppercase">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active-link" href="service.html">Our Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="works.html">Our Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" data-aos="fade-down">
+    <div class="hero-content">
+      <span class="badge-custom">Our Services</span>
+      <h1>Capturing Moments, Creating Memories</h1>
+      <p>
+        At Timeline Studio, we believe every moment tells a story. Our
+        photography services are designed to capture the essence of your
+        special occasions with creativity, clarity, and timeless elegance.
+        Whether it’s a wedding, corporate event, or a personal photoshoot, we
+        ensure your memories live forever.
+      </p>
+    </div>
+  </section>
+
+  <section class="service-section container" data-aos="fade-up">
+    <!-- Wedding Photography -->
+    <div class="row align-items-center service-block" data-aos="fade-left">
+      <div class="col-md-6">
+        <h2 class="service-title">
+          <i class="fa-solid fa-camera-retro me-2"></i> Wedding Photography
+        </h2>
+        <p class="service-text">
+          From candid moments to grand celebrations, we specialize in weaving
+          emotions into frames. Our team captures every detail – from
+          pre-wedding rituals to the final send-off – ensuring your big day
+          remains unforgettable.
+        </p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="assests/images/img/ser-3.webp" alt="Wedding Photography" class="service-img" />
+      </div>
+    </div>
+
+    <!-- Engagement & Pre-Wedding Shoots -->
+    <div class="row align-items-center flex-md-row-reverse service-block" data-aos="fade-right">
+      <div class="col-md-6">
+        <h2 class="service-title">
+          <i class="fa-solid fa-ring me-2"></i> Engagement & Pre-Wedding
+          Shoots
+        </h2>
+        <p class="service-text">
+          Celebrate your journey of love with cinematic and creative
+          pre-wedding photography. From scenic outdoor locations to intimate
+          indoor setups, we craft visuals that reflect your personality and
+          story.
+        </p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="assests/images/img/ser-4.webp" alt="Engagement & Pre-Wedding Shoots" class="service-img" />
+      </div>
+    </div>
+
+    <!-- Family & Portrait Photography -->
+    <div class="row align-items-center service-block" data-aos="fade-left">
+      <div class="col-md-6">
+        <h2 class="service-title">
+          <i class="fa-solid fa-people-group me-2"></i> Family & Portrait
+          Photography
+        </h2>
+        <p class="service-text">
+          Timeless portraits, fun family shoots, and creative lifestyle
+          sessions – we bring out genuine emotions and turn them into
+          cherished keepsakes for generations to come.
+        </p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="assests/images/img/ser-6.webp" alt="Family & Portrait Photography" class="service-img" />
+      </div>
+    </div>
+
+    <!-- Events & Celebrations -->
+    <div class="row align-items-center flex-md-row-reverse service-block" data-aos="fade-right">
+      <div class="col-md-6">
+        <h2 class="service-title">
+          <i class="fa-solid fa-champagne-glasses me-2"></i> Events &
+          Celebrations
+        </h2>
+        <p class="service-text">
+          Be it birthdays, anniversaries, cultural events, or corporate
+          functions, we capture the energy, joy, and significance of every
+          celebration with perfection.
+        </p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="assests/images/img/ser-7.webp" alt="Events & Celebrations" class="service-img" />
+      </div>
+    </div>
+
+    <!-- Corporate & Branding Photography -->
+    <div class="row align-items-center service-block" data-aos="fade-left">
+      <div class="col-md-6">
+        <h2 class="service-title">
+          <i class="fa-solid fa-building me-2"></i> Corporate & Branding
+          Photography
+        </h2>
+        <p class="service-text">
+          Professional headshots, product photography, and brand campaigns
+          tailored to elevate your business image. We help you showcase your
+          brand’s story with sophistication and creativity.
+        </p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="assests/images/img/ser-10.webp" alt="Corporate & Branding Photography" class="service-img" />
+      </div>
+    </div>
+
+    <!-- Candid & Creative Shoots -->
+    <div class="row align-items-center flex-md-row-reverse service-block" data-aos="fade-right">
+      <div class="col-md-6">
+        <h2 class="service-title">
+          <i class="fa-solid fa-film me-2"></i> Candid & Creative Shoots
+        </h2>
+        <p class="service-text">
+          Our passion lies in freezing raw emotions and unscripted moments.
+          With an artistic approach, we create images that feel natural,
+          authentic, and beautifully memorable.
+        </p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="assests/images/img/ser-9.webp" alt="Candid & Creative Shoots" class="service-img" />
+      </div>
+    </div>
+
+    <!-- Travel & Outdoor Photography -->
+    <div class="row align-items-center service-block" data-aos="fade-left">
+      <div class="col-md-6">
+        <h2 class="service-title">
+          <i class="fa-solid fa-mountain-sun me-2"></i> Travel & Outdoor
+          Photography
+        </h2>
+        <p class="service-text">
+          From breathtaking landscapes to lifestyle captures, we explore the
+          world with our lens, delivering vibrant and soulful photography that
+          inspires wanderlust.
+        </p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="assests/images/img/ser-8.webp" alt="Travel & Outdoor Photography" class="service-img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="why-choose-us" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="section-title">Why Choose Us?</h2>
+      <div class="choose-items text-center">
+        <div class="choose-card">
+          <span class="icon"><i class="fa-solid fa-user-tie"></i></span>
+          <p>Professional Team with Creative Vision</p>
+        </div>
+        <div class="choose-card">
+          <span class="icon"><i class="fa-solid fa-camera-retro"></i></span>
+          <p>Latest Photography & Editing Technology</p>
+        </div>
+        <div class="choose-card">
+          <span class="icon"><i class="fa-solid fa-box-open"></i></span>
+          <p>Customized Packages for Every Need</p>
+        </div>
+        <div class="choose-card">
+          <span class="icon"><i class="fa-solid fa-heart"></i></span>
+          <p>Passion for Storytelling & Perfection</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section text-center d-flex align-items-center justify-content-center rounded-4 shadow-lg" data-aos="fade-up">
+    <div class="container info-card">
+      <h2 class="cta-heading mb-3">
+        Ready to turn your moments into memories?
+      </h2>
+      <p class="cta-para mb-3">We capture every detail with creativity and care, so your special moments last a lifetime.</p>
+      <a href="/contact.html" class="btn btn-cta">Book Now</a>
+    </div>
+  </section>
+
+  <footer class="footer" style="margin-top: 40px;" data-aos="fade-up">
+    <div class="container py-4 px-4">
+      <div class="row">
+        <div class="col-lg-6 col-md-6 text-center text-md-start">
+           <img src="assests/images/Timeline Studio_Black.png" alt="" class="img-fluid" width="250px">
+          <p class="foot-text">Capturing timeless moments with creativity and precision. Your one-stop destination for
+            stunning visuals and storytelling.
+            Transforming your moments into lasting memories.</p>
+
+          <p></p>
+        </div>
+        <div class="col-lg-3 col-md-6 text-center text-md-start">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li class="footer-link active-link"><a href="index.html" class="text-uppercase active-link">Home</a></li>
+            <li class="footer-link active-link"><a href="service.html" class="text-uppercase">Our Services</a></li>
+            <li class="footer-link"><a href="works.html" class="text-uppercase">Our Works</a></li>
+            <!-- <li class="footer-link"><a href="gallery.html" class="text-uppercase">Gallery</a></li> -->
+            <li class="footer-link"><a href="contact.html" class="text-uppercase">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 text-center text-md-start">
+          <h5>Follow Us</h5>
+          <div class="d-flex gap-4 social justify-content-center justify-content-md-start">
+            <a href="#" class="fs-4"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="fs-4"><i class="bi bi-youtube"></i></a>
+            <a href="#" class="fs-4"><i class="bi bi-instagram"></i></a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <div class="row bg-black text-white py-3">
+      <div class="col-12 d-flex justify-content-center">
+        <p class="copy mb-0">© 2025 Timeline Studios. All rights reserved. Crafted with ❤️ by <a href="https://discovertechnologies.co/" style="color: #fff; text-decoration: none;">ARA Discover Technologies.</a></p>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="assests/script/script.js"></script>
+
+</html>
